@@ -32,6 +32,13 @@ if mode == 0: #Create
                 break
 
         RGBTuple.append(chars.index(char))
+    
+    #Adds last character, even if it's not complete
+    for i in range(3-len(RGBTuple)):
+        RGBTuple.append(0)
+    RGBTuple = tuple(RGBTuple)
+    picture[x,y] = RGBTuple
+    RGBTuple = [] 
 
     image.save("image/696d616765546f436f6e766572740a.png")
 
