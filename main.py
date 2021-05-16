@@ -24,6 +24,12 @@ if mode == 0: #Create
             picture[x,y] = RGBTuple
             RGBTuple = []
             x += 1
+            if (x >= 10):
+                x = 0
+                y += 1
+            if (y >= 10):
+                print("Error: message too long")
+                break
 
         RGBTuple.append(chars.index(char))
 
